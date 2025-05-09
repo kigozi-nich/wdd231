@@ -3,11 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="WDD231 Home Page for Web and Computer Programming Portfolio">
+    <meta name="author" content="Nicholas Kigozi">
+    <title>Nicholas Kigozi| WDD231 Portfolio</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- JavaScript Files with defer attribute -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 <body>
     <header>
-        <h1></h1>
+        <img src="images/nicho.jpg" alt="Profile Photo" class="profile-image">
+        <span class="name">Nicholas Kigozi</span>
+        <button id="hamburgerBtn" class="hamburger">☰</button>
     </header>
+    
+    <nav>
+        <ul id="primaryNav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+            <li><a href="https://github.com/Kigozi-nich" target="_blank">GitHub Profile</a></li>
+            <li><a href="https://linkedin.com/in/Nicholas Kigozi" target="_blank">LinkedIn</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h1>Home</h1>
+        
+        <section class="coursework">
+            <h2>Course Work</h2>
+            <ul>
+                <li>Completed Assignment 1</li>
+                <li>Completed Assignment 2</li>
+                <li>Completed Assignment 3</li>
+            </ul>
+        </section>
+        
+        <section class="location">
+            <h2>Kampala, Uganda</h2>
+            <div class="location-image-container">
+                <img src="images/babo.jpeg" alt="Baobab Trees" class="location-image">
+                <p>Baobab Trees</p>
+            </div>
+        </section>
+        
+        <section class="certificate">
+            <h2>Web and Computer Programming Certificate</h2>
+            
+            <div class="course-filters">
+                <button id="allBtn" class="filter-btn active">All</button>
+                <button id="cseBtn" class="filter-btn">CSE</button>
+                <button id="wddBtn" class="filter-btn">WDD</button>
+            </div>
+            
+            <div id="courseContainer" class="course-container"></div>
+            
+            <div class="credits-container">
+                <p>Total Credits: <span id="totalCredits">0</span></p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Nicholas Kigozi, Kampala-Uganda</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
