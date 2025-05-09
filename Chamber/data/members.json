@@ -14,7 +14,7 @@
       "address": "Plot 14, Jinja Road, Kampala",
       "phone": "+256 414 123456",
       "website": "https://javahousekampala.co.ug",
-      "image": "images/java-house.webp",
+      "image": "images/java.png",
       "membershipLevel": 2,
       "description": "Premium coffee shop and restaurant with African flair.",
       "category": "Food & Beverage"
@@ -24,7 +24,7 @@
       "address": "Plot 5, Elgon Terrace, Kololo, Kampala",
       "phone": "+256 312 555777",
       "website": "https://proteahotelkampala.com",
-      "image": "images/protea-hotel.webp",
+      "image": "images/protea.jpeg",
       "membershipLevel": 3,
       "description": "Luxury accommodation in the heart of Kampala with conference facilities.",
       "category": "Hospitality"
@@ -34,7 +34,7 @@
       "address": "Plot 69-71, Jinja Road, Kampala",
       "phone": "+256 312 120000",
       "website": "https://mtn.co.ug",
-      "image": "images/mtn-uganda.webp",
+      "image": "images/mtn.png",
       "membershipLevel": 3,
       "description": "Leading telecommunications provider offering mobile and internet services.",
       "category": "Telecommunications"
@@ -44,7 +44,7 @@
       "address": "Plot 22, Kibira Road, Industrial Area, Kampala",
       "phone": "+256 414 258361",
       "website": "https://roofingsgroup.com",
-      "image": "images/roofings.webp",
+      "image": "images/roofing.png",
       "membershipLevel": 2,
       "description": "Manufacturer of steel and building products for construction projects.",
       "category": "Manufacturing"
@@ -54,7 +54,7 @@
       "address": "Plot 7, Kampala Road, Kampala",
       "phone": "+256 757 101010",
       "website": "https://cafejavas.co.ug",
-      "image": "i",
+      "image": "images/cafe_javas.jpeg",
       "membershipLevel": 2,
       "description": "Popular café and restaurant chain known for excellent service and varied menu.",
       "category": "Food & Beverage"
@@ -64,7 +64,7 @@
       "address": "Plot 13, Innovation Drive, Bugolobi, Kampala",
       "phone": "+256 789 222333",
       "website": "https://kampalatechhub.org",
-      "image": "images/tech-hub.webp",
+      "image": "images/kampalatech_hub.jpeg",
       "membershipLevel": 1,
       "description": "Co-working space and incubator for tech startups and entrepreneurs.",
       "category": "Technology"
@@ -84,7 +84,7 @@
       "address": "Plot 64-86, Yusuf Lule Road, Kampala",
       "phone": "+256 414 500000",
       "website": "https://gardencitykampala.com",
-      "image": "images/garden-city.webp",
+      "image": "images/gardencity_mall.png",
       "membershipLevel": 2,
       "description": "Shopping mall with retail stores, restaurants, and entertainment options.",
       "category": "Retail"
