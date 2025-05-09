@@ -4,7 +4,7 @@
       "address": "Plot 23, Nakasero Market, Kampala",
       "phone": "+256 705 123456",
       "website": "https://nakaserocrafts.co.ug",
-      "image": "images/nakasero-crafts.webp",
+      "image": "images/nakasero_market.jpeg",
       "membershipLevel": 1,
       "description": "Handcrafted unique Ugandan souvenirs and crafts.",
       "category": "Retail"
@@ -74,7 +74,7 @@
       "address": "Plot 44-46, Kampala Road, Kampala",
       "phone": "+256 417 712100",
       "website": "https://centenarybank.co.ug",
-      "image": "images/centenary-bank.webp",
+      "image": "images/centenary_bank.png",
       "membershipLevel": 3,
       "description": "Local bank providing financial services to individuals and businesses.",
       "category": "Financial Services"
