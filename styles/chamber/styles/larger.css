@@ -1,0 +1,133 @@
+/* Tablet and Desktop Styles for Kampala Chamber of Commerce */
+
+/* Tablet Styles (768px and above) */
+@media only screen and (min-width: 768px) {
+    /* Header Adjustments */
+    .header-content {
+        flex-wrap: nowrap;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+    
+    /* Navigation Adjustments */
+    .navigation {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    /* Directory Grid Adjustments */
+    .directory-container.grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    /* List View Adjustments */
+    .directory-container.list .card-content {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .directory-container.list .member-image {
+        margin-right: 1.5rem;
+        margin-bottom: 0;
+    }
+    
+    /* Footer Adjustments */
+    .footer-top {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .footer-info {
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+    }
+    
+    .footer-logo {
+        margin-right: 1.5rem;
+        margin-bottom: 0;
+    }
+    
+    .address {
+        margin-bottom: 0;
+    }
+}
+
+/* Desktop Styles (1024px and above) */
+@media only screen and (min-width: 1024px) {
+    /* Header Enhancements */
+    .header-content {
+        padding: 0.5rem 0;
+    }
+    
+    .site-name {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+    }
+    
+    /* Navigation Enhancements */
+    .navigation {
+        padding: 0.25rem 0;
+    }
+    
+    .navigation a {
+        font-size: 1.1rem;
+    }
+    
+    /* Directory Grid Enhancements */
+    .directory-container.grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Member Card Enhancements */
+    .member-card {
+        transition: all 0.3s ease;
+    }
+    
+    .member-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Footer Enhancements */
+    .footer-top {
+        padding: 1rem 0;
+    }
+    
+    .social-media img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Large Desktop Styles (1440px and above) */
+@media only screen and (min-width: 1440px) {
+    /* Directory Grid Enhancements */
+    .directory-container.grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* Main Content Spacing */
+    main {
+        padding: 2rem;
+    }
+    
+    /* Enhanced Typography */
+    body {
+        font-size: 1.1rem;
+    }
+    
+    h2 {
+        font-size: 2.2rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+}
