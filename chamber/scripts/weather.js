@@ -1,131 +1,149 @@
-// Weather API JavaScript File
-document.addEventListener('DOMContentLoaded', () => {
-    // OpenWeatherMap API key - Replace with your actual API key
-    const apiKey = 'YOUR_API_KEY_HERE'; // You'll need to get this from OpenWeatherMap
-    
-    // City for your Chamber of Commerce (Kampala, Uganda)
-    const city = 'Kampala,ug';
-    
-    // Fetch current weather
-    fetchCurrentWeather(city, apiKey);
-    
-    // Fetch forecast
-    fetchForecast(city, apiKey);
-});
+// Weather API Integration for Kampala Chamber of Commerce
+// OpenWeatherMap API for Kampala, Uganda
 
-// Function to fetch current weather
-function fetchCurrentWeather(city, apiKey) {
-    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
-    
-    fetch(currentWeatherUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Display current weather information
-            document.getElementById('current-temp').textContent = Math.round(data.main.temp);
-            document.getElementById('weather-desc').textContent = data.weather[0].description;
-        })
-        .catch(error => {
-            console.error('Error fetching current weather:', error);
-            document.getElementById('current-temp').textContent = 'Error';
-            document.getElementById('weather-desc').textContent = 'Could not load weather data';
-        });
+const apiKey = '4caff26783d3941d4a43a6434e735511';
+const lat = 0.3476;
+const lon = 32.5825;
+
+// API URLs
+const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+
+// DOM Elements
+const currentTemp = document.querySelector('#current-temp');
+const weatherIcon = document.querySelector('#weather-icon');
+const weatherDescription = document.querySelector('#weather-description');
+const forecastContainer = document.querySelector('#forecast-container');
+
+// Fetch current weather data
+async function fetchCurrentWeather() {
+    try {
+        const response = await fetch(currentWeatherUrl);
+        if (response.ok) {
+            const data = await response.json();
+            displayCurrentWeather(data);
+        } else {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+    } catch (error) {
+        console.error('Error fetching current weather:', error);
+        currentTemp.textContent = 'N/A';
+        weatherDescription.textContent = 'Weather data unavailable';
+    }
 }
 
-// Function to fetch 3-day forecast
-function fetchForecast(city, apiKey) {
-    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`;
-    
-    fetch(forecastUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Process forecast data for the next three days
-            const forecastData = extractThreeDayForecast(data.list);
-            
-            // Display forecast
-            for (let i = 0; i < forecastData.length; i++) {
-                document.getElementById(`day${i+1}`).textContent = forecastData[i].day;
-                document.getElementById(`temp${i+1}`).textContent = forecastData[i].temp;
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching forecast:', error);
-            for (let i = 1; i <= 3; i++) {
-                document.getElementById(`day${i}`).textContent = 'Error';
-                document.getElementById(`temp${i}`).textContent = '--';
-            }
-        });
+// Fetch 3-day forecast data
+async function fetchWeatherForecast() {
+    try {
+        const response = await fetch(forecastUrl);
+        if (response.ok) {
+            const data = await response.json();
+            displayWeatherForecast(data);
+        } else {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+    } catch (error) {
+        console.error('Error fetching weather forecast:', error);
+        forecastContainer.innerHTML = '<p>Forecast data unavailable</p>';
+    }
 }
 
-// Extract 3-day forecast from API response (noon forecasts)
-function extractThreeDayForecast(forecastList) {
-    const today = new Date();
-    const threeDayForecast = [];
+// Display current weather
+function displayCurrentWeather(data) {
+    const temp = Math.round(data.main.temp);
+    const description = data.weather[0].description;
+    const icon = data.weather[0].icon;
     
-    // Create a map to store the forecast for each day
-    const forecastMap = new Map();
+    currentTemp.innerHTML = `${temp}&deg;C`;
+    weatherDescription.textContent = capitalizeWords(description);
     
-    // Process each forecast entry
+    const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+    weatherIcon.setAttribute('src', iconUrl);
+    weatherIcon.setAttribute('alt', description);
+}
+
+// Display 3-day forecast
+function displayWeatherForecast(data) {
+    // Get daily forecasts (API returns 5-day forecast with 3-hour intervals)
+    const dailyForecasts = getDailyForecasts(data.list);
+    
+    forecastContainer.innerHTML = '';
+    
+    // Display next 3 days
+    for (let i = 1; i <= 3 && i < dailyForecasts.length; i++) {
+        const forecast = dailyForecasts[i];
+        const forecastCard = createForecastCard(forecast);
+        forecastContainer.appendChild(forecastCard);
+    }
+}
+
+// Process forecast data to get daily summaries
+function getDailyForecasts(forecastList) {
+    const dailyData = {};
+    
     forecastList.forEach(item => {
-        const forecastDate = new Date(item.dt * 1000);
-        const forecastDay = forecastDate.getDate();
+        const date = new Date(item.dt * 1000);
+        const dateKey = date.toDateString();
         
-        // Skip today's forecasts
-        if (forecastDay === today.getDate()) {
-            return;
+        if (!dailyData[dateKey]) {
+            dailyData[dateKey] = {
+                date: date,
+                temps: [],
+                weather: item.weather[0],
+                humidity: item.main.humidity
+            };
         }
         
-        // Format the day name
-        const dayName = forecastDate.toLocaleDateString('en-US', { weekday: 'short' });
-        
-        // If this is a new day, add it to our map
-        if (!forecastMap.has(forecastDay)) {
-            forecastMap.set(forecastDay, {
-                day: dayName,
-                forecasts: []
-            });
-        }
-        
-        // Add this forecast to the day's collection
-        forecastMap.get(forecastDay).forecasts.push({
-            time: forecastDate.getHours(),
-            temp: Math.round(item.main.temp)
-        });
+        dailyData[dateKey].temps.push(item.main.temp);
     });
     
-    // Convert map to array
-    const daysArray = Array.from(forecastMap.values());
-    
-    // Take the first 3 days
-    for (let i = 0; i < 3 && i < daysArray.length; i++) {
-        const day = daysArray[i];
-        
-        // Find noon forecast or use the average
-        let temp;
-        const noonForecast = day.forecasts.find(f => f.time === 12);
-        
-        if (noonForecast) {
-            temp = noonForecast.temp;
-        } else {
-            // Calculate average temperature
-            const sum = day.forecasts.reduce((acc, f) => acc + f.temp, 0);
-            temp = Math.round(sum / day.forecasts.length);
-        }
-        
-        threeDayForecast.push({
-            day: day.day,
-            temp: temp
-        });
-    }
-    
-    return threeDayForecast;
+    // Convert to array and calculate average temperatures
+    return Object.values(dailyData).map(day => ({
+        date: day.date,
+        avgTemp: Math.round(day.temps.reduce((a, b) => a + b, 0) / day.temps.length),
+        maxTemp: Math.round(Math.max(...day.temps)),
+        minTemp: Math.round(Math.min(...day.temps)),
+        weather: day.weather,
+        humidity: day.humidity
+    }));
 }
+
+// Create forecast card element
+function createForecastCard(forecast) {
+    const card = document.createElement('div');
+    card.className = 'forecast-card';
+    
+    const dayName = forecast.date.toLocaleDateString('en-US', { weekday: 'short' });
+    const iconUrl = `https://openweathermap.org/img/wn/${forecast.weather.icon}.png`;
+    
+    card.innerHTML = `
+        <div class="forecast-day">${dayName}</div>
+        <img src="${iconUrl}" alt="${forecast.weather.description}" class="forecast-icon">
+        <div class="forecast-temps">
+            <span class="forecast-high">${forecast.maxTemp}&deg;</span>
+            <span class="forecast-low">${forecast.minTemp}&deg;</span>
+        </div>
+        <div class="forecast-desc">${capitalizeWords(forecast.weather.description)}</div>
+    `;
+    
+    return card;
+}
+
+// Utility function to capitalize words
+function capitalizeWords(str) {
+    return str.replace(/\w\S*/g, (txt) => 
+        txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+    );
+}
+
+// Initialize weather data when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    fetchCurrentWeather();
+    fetchWeatherForecast();
+});
+
+// Refresh weather data every 10 minutes
+setInterval(() => {
+    fetchCurrentWeather();
+    fetchWeatherForecast();
+}, 600000);

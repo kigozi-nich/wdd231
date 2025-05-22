@@ -3,148 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kampala Chamber of Commerce | Home</title>
-    <meta name="description" content="Official website for the Kampala Chamber of Commerce. Join our community to grow your business and connect with local entrepreneurs.">
+    <meta name="description" content="Welcome to Kampala Chamber of Commerce - Your gateway to business opportunities, networking, and economic growth in Kampala, Uganda">
+    <meta name="author" content="Nicholas Kigozi">
     
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/medium.css" media="(min-width: 32.5em)">
-    <link rel="stylesheet" href="css/large.css" media="(min-width: 64em)">
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Kampala Chamber of Commerce">
+    <meta property="og:description" content="Empowering business growth and networking opportunities in Uganda's capital city.">
+    <meta property="og:image" content="https://kigozi-nich.github.io/wdd231/chamber/images/kampala_chamber.png">
+    <meta property="og:url" content="https://kigozi-nich.github.io/wdd231/chamber/index.html">
     
-    <!-- Scripts (defer to load after HTML) -->
-    <script src="js/weather.js" defer></script>
-    <script src="js/spotlight.js" defer></script>
+    <title>Home | Kampala Chamber of Commerce</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- JavaScript Files with defer attribute -->
+    <script src="scripts/home.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/date.js" defer></script>
 </head>
 <body>
     <header>
         <div class="header-content">
             <div class="logo-container">
-                <img src="images/logo.png" alt="Kampala Chamber of Commerce Logo">
-                <div class="headings">
-                    <h1>Kampala</h1>
-                    <h2>Chamber of Commerce</h2>
+                <img src="images/kampala_chamber.png" alt="Kampala Chamber of Commerce Logo" class="logo">
+                <div class="title-container">
+                    <h2 class="site-name">Kampala</h2>
+                    <p class="tagline">Chamber of Commerce</p>
                 </div>
             </div>
-            <div class="social-container">
-                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        
+            <button id="hamburgerBtn" class="hamburger">&#9776;</button>
+            
+            <div class="theme-toggle">
+                <span class="toggle-icon">&#9728;</span>
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-icon">&#9790;</span>
             </div>
-            <button id="hamburger-btn">&#9776;</button>
-        </div>
-        <nav>
-            <ul id="primary-nav">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="#">Join</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="date-header">
-            <p id="current-date">Current Date Will Display Here</p>
         </div>
     </header>
-
-    <main>
-        <!-- Hero Section -->
-        <div class="hero-container">
+    
+    <nav>
+        <ul id="primaryNav" class="navigation">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Business Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="podcast.html">Podcast</a></li>
+            <li><a href="events.html">Events</a></li>
+        </ul>
+    </nav>
+    
+    <main class="home-content">
+        <!-- Hero Section with Call to Action -->
+        <section class="hero">
             <picture>
-                <source srcset="images/hero-large.jpg" media="(min-width: 1024px)">
-                <source srcset="images/hero-medium.jpg" media="(min-width: 640px)">
-                <img src="images/hero-small.jpg" alt="Kampala business district" class="hero-img">
+                <source media="(min-width: 768px)" srcset="images/hero-desktop.jpg">
+                <img src="images/hero-mobile.jpg" alt="Kampala Business District" class="hero-image">
             </picture>
-            <div class="call-to-action">
-                <a href="join.html" class="cta-button">Join the Chamber</a>
+            <div class="hero-overlay">
+                <h1>Welcome to Kampala Chamber of Commerce</h1>
+                <p>Empowering Business Growth in Uganda's Capital</p>
+                <a href="join.html" class="cta-button">Join Our Chamber</a>
+            </div>
+        </section>
+
+        <!-- Current Events Section -->
+        <section class="current-events">
+            <h2>Current Events</h2>
+            <div class="events-container">
+                <article class="event-card">
+                    <h3>Business Networking Summit 2025</h3>
+                    <p class="event-date">June 15, 2025</p>
+                    <p>Join us for our annual networking summit featuring keynote speakers, workshops, and business matchmaking opportunities.</p>
+                </article>
+                <article class="event-card">
+                    <h3>Digital Transformation Workshop</h3>
+                    <p class="event-date">June 28, 2025</p>
+                    <p>Learn how to leverage technology to grow your business with expert-led sessions on e-commerce and digital marketing.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather">
+            <h2>Kampala Weather</h2>
+            <div id="weather-container" class="weather-info">
+                <div class="current-weather">
+                    <div class="weather-main">
+                        <span id="current-temp">Loading...</span>
+                        <img id="weather-icon" src="" alt="" class="weather-icon">
+                    </div>
+                    <p id="weather-description">Loading weather data...</p>
+                </div>
+                <div class="forecast">
+                    <h3>3-Day Forecast</h3>
+                    <div id="forecast-container" class="forecast-grid">
+                        <!-- Forecast data will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Spotlights -->
+        <section class="company-spotlights">
+            <h2>Featured Members</h2>
+            <div id="spotlights-container" class="spotlights-grid">
+                <!-- Random gold/silver member spotlights will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-top">
+            <div class="footer-info">
+                <img src="images/kampala_chamber.png" alt="Kampala Chamber of Commerce Logo" class="footer-logo">
+                <div class="address">
+                    <p>Kampala Chamber of Commerce</p>
+                    <p>Plot 1, Kimathi Avenue</p>
+                    <p>Kampala, Uganda</p>
+                    <p>info@kampalachamber.co.ug</p>
+                    <p>(+256) 414-123456</p>
+                </div>
+            </div>
+            
+            <div class="social-media">
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                    <img src="images/youtube.png" alt="YouTube Icon">
+                </a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                    <img src="images/twitter.png" alt="Twitter Icon">
+                </a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <img src="images/linkedin.png" alt="LinkedIn Icon">
+                </a>
             </div>
         </div>
         
-        <!-- Main Content Grid -->
-        <div class="home-grid">
-            <!-- Events Section -->
-            <section class="events">
-                <h2>Upcoming Events</h2>
-                <div class="event-card">
-                    <h3>Business Networking Lunch</h3>
-                    <p>June 15, 2025 • 12:00 PM</p>
-                    <p>Join us for our monthly networking lunch at Serena Hotel.</p>
-                    <a href="#" class="event-link">Learn More</a>
-                </div>
-            </section>
-            
-            <!-- Weather Section -->
-            <section class="weather">
-                <h2>Weather</h2>
-                <div class="weather-card">
-                    <div class="current-weather">
-                        <h3>Current Weather</h3>
-                        <div class="temp-container">
-                            <span id="current-temp">--</span>°F
-                            <p id="weather-desc">Loading...</p>
-                        </div>
-                    </div>
-                    <div class="forecast">
-                        <h3>3-Day Forecast</h3>
-                        <div class="forecast-container">
-                            <div class="forecast-day">
-                                <span id="day1">--</span>
-                                <span id="temp1">--</span>°F
-                            </div>
-                            <div class="forecast-day">
-                                <span id="day2">--</span>
-                                <span id="temp2">--</span>°F
-                            </div>
-                            <div class="forecast-day">
-                                <span id="day3">--</span>
-                                <span id="temp3">--</span>°F
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Member Spotlights Section -->
-            <section class="spotlights">
-                <h2>Member Spotlights</h2>
-                <div class="spotlight-container">
-                    <!-- Member spotlights will be dynamically added here -->
-                    <div class="spotlight-loading">Loading member spotlights...</div>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="images/logo.png" alt="Kampala Chamber of Commerce Logo">
-                <div class="footer-name">
-                    <h3>Kampala Chamber of Commerce</h3>
-                    <p>123 Business Avenue, Kampala, Uganda</p>
-                </div>
-            </div>
-            <div class="footer-contact">
-                <p>info@kampalachamber.org</p>
-                <p>+256-700-123-456</p>
-                <p><a href="#">Location Map</a></p>
-            </div>
-        </div>
-        <div class="footer-base">
-            <p>&copy; <span id="current-year"></span> Kampala Chamber | Your Name | WDD 231 Project</p>
-            <p>Last Updated: <span id="last-updated"></span></p>
+        <div class="footer-bottom">
+            <p>WDD231 Class Project</p>
+            <p>Nicholas Kigozi</p>
+            <p>&copy; <span id="currentYear"></span> Kampala Chamber of Commerce</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
         </div>
     </footer>
-    <script>
-        // Hamburger menu toggle
-        document.getElementById('hamburger-btn').addEventListener('click', function() {
-            document.getElementById('primary-nav').classList.toggle('open');
-        });
-        
-        // Display current date
-        const now = new Date();
-        document.getElementById('current-date').textContent = new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(now);
-        
-        // Display current year and last updated time
-        document.getElementById('current-year').textContent = now.getFullYear();
-        document.getElementById('last-updated').textContent = document.lastModified;
-    </script>
 </body>
 </html>
