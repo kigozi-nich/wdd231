@@ -131,3 +131,369 @@
         font-size: 1.5rem;
     }
 }
+
+
+/** Css for Larger desktop**/
+
+/* ==========================================================================
+   Larger Screen Styles - Tablet and Desktop
+   Kampala Chamber of Commerce
+   ========================================================================== */
+
+/* ==========================================================================
+   Tablet Styles (768px and up)
+   ========================================================================== */
+
+@media screen and (min-width: 768px) {
+    
+    /* Header adjustments */
+    .header-content {
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+    
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .site-name {
+        font-size: var(--font-size-xl);
+    }
+    
+    .tagline {
+        font-size: var(--font-size-base);
+    }
+    
+    /* Navigation - Horizontal layout */
+    .hamburger {
+        display: none;
+    }
+    
+    .navigation {
+        display: flex !important;
+        flex-direction: row;
+        background-color: var(--primary-color);
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .navigation li {
+        border-bottom: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .navigation li:last-child {
+        border-right: none;
+    }
+    
+    .navigation a {
+        padding: var(--spacing-md) var(--spacing-lg);
+        white-space: nowrap;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .navigation a::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: -100%;
+        width: 100%;
+        height: 3px;
+        background-color: var(--secondary-color);
+        transition: left var(--transition-normal);
+    }
+    
+    .navigation a:hover::before,
+    .navigation .active a::before {
+        left: 0;
+    }
+    
+    /* Hero section enhancement */
+    .hero {
+        height: 500px;
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .hero h1 {
+        font-size: clamp(2rem, 5vw, 4rem);
+    }
+    
+    .hero p {
+        font-size: var(--font-size-xl);
+        max-width: 600px;
+    }
+    
+    .cta-button {
+        font-size: var(--font-size-xl);
+        padding: var(--spacing-md) var(--spacing-xl);
+    }
+    
+    /* Events grid */
+    .events-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-xl);
+    }
+    
+    /* Weather section improvements */
+    .weather {
+        margin: 0 var(--spacing-lg) var(--spacing-xl);
+    }
+    
+    .forecast-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    #current-temp {
+        font-size: 4rem;
+    }
+    
+    .weather-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    /* Company spotlights */
+    .spotlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-xl);
+    }
+    
+    /* Footer improvements */
+    .footer-top {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: var(--spacing-xl);
+    }
+    
+    .footer-info {
+        flex-direction: row;
+        text-align: left;
+        gap: var(--spacing-lg);
+    }
+    
+    .footer-logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .social-media {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .social-media img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* ==========================================================================
+   Desktop Styles (1024px and up)
+   ========================================================================== */
+
+@media screen and (min-width: 1024px) {
+    
+    /* Enhanced typography */
+    :root {
+        --font-size-base: 18px;
+        --font-size-large: 20px;
+        --font-size-xl: 28px;
+        --font-size-xxl: 36px;
+    }
+    
+    /* Header enhancements */
+    .header-content {
+        padding: var(--spacing-lg) var(--spacing-xl);
+    }
+    
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+    
+    /* Navigation with better hover effects */
+    .navigation a {
+        padding: var(--spacing-md) var(--spacing-xl);
+        transition: all var(--transition-normal);
+    }
+    
+    .navigation a:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+        color: var(--secondary-color);
+    }
+    
+    /* Hero section - full screen impact */
+    .hero {
+        height: 600px;
+    }
+    
+    .hero-overlay {
+        padding: var(--spacing-xl);
+    }
+    
+    /* Three column layout for main content */
+    .home-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: var(--spacing-xl);
+        padding: 0 var(--spacing-lg);
+    }
+    
+    .hero {
+        grid-column: 1 / -1;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .main-column {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xl);
+    }
+    
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+    
+    /* Events - single column in main area */
+    .events-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .event-card {
+        padding: var(--spacing-xl);
+    }
+    
+    /* Weather - sidebar styling */
+    .weather {
+        margin: 0;
+        padding: var(--spacing-xl);
+    }
+    
+    .current-weather {
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .weather-main {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    #current-temp {
+        font-size: 3.5rem;
+    }
+    
+    /* Company spotlights - back to single column in sidebar */
+    .company-spotlights {
+        padding: 0;
+    }
+    
+    .spotlights-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .spotlight-card {
+        padding: var(--spacing-lg);
+    }
+    
+    /* Enhanced footer */
+    .footer-top {
+        padding: var(--spacing-xl) var(--spacing-xl);
+    }
+    
+    .footer-info {
+        gap: var(--spacing-xl);
+    }
+    
+    .address {
+        font-size: var(--font-size-large);
+    }
+    
+    .social-media {
+        gap: var(--spacing-md);
+    }
+    
+    .social-media img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ==========================================================================
+   Large Desktop Styles (1200px and up)
+   ========================================================================== */
+
+@media screen and (min-width: 1200px) {
+    
+    /* Container max width */
+    .header-content,
+    .home-content,
+    .footer-top {
+        max-width: 1400px;
+    }
+    
+    /* Hero section - cinematic experience */
+    .hero {
+        height: 70vh;
+        min-height: 500px;
+        max-height: 800px;
+    }
+    
+    .hero h1 {
+        font-size: clamp(3rem, 6vw, 5rem);
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    }
+    
+    .hero p {
+        font-size: clamp(1.2rem, 2vw, 1.5rem);
+        max-width: 700px;
+    }
+    
+    /* Grid layout optimization */
+    .home-content {
+        grid-template-columns: 2.5fr 1fr;
+        gap: var(--spacing-xl);
+        padding: 0 var(--spacing-xl);
+    }
+    
+    /* Events - two column layout returns */
+    .events-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-xl);
+    }
+    
+    /* Weather enhancements */
+    .weather {
+        padding: var(--spacing-xl);
+    }
+    
+    #current-temp {
+        font-size: 4rem;
+    }
+    
+    .weather-icon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    /* Company spotlights - can fit 2 in sidebar */
+    .spotlights-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    /* Navigation - more spacing */
+    .navigation a {
+        padding: var(--spacing-lg) var(--spacing-xl);
+    }
+    
+    /* Footer enhancements */
+    .footer-top {
+        padding: var(--spacing-xl);
+
+    }
+}
