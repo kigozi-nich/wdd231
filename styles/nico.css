@@ -1151,6 +1151,13 @@ footer {
     transform: scale(1.2);
 }
 
+.social-media img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+    transition: filter var(--transition-fast);
+}
+
 .social-media a:hover img {
     filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(45deg);
 }
