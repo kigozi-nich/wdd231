@@ -1,499 +1,181 @@
-/* Tablet and Desktop Styles for Kampala Chamber of Commerce */
-
-/* Tablet Styles (768px and above) */
-@media only screen and (min-width: 768px) {
-    /* Header Adjustments */
-    .header-content {
-        flex-wrap: nowrap;
+/* Large Screen Styles (1024px and up) */
+@media (min-width: 1024px) {
+    
+    /* Typography */
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.5rem; }
+    h3 { font-size: 2rem; }
+    
+    /* Container */
+    .container {
+        padding: 0 2rem;
     }
     
-    .hamburger {
-        display: none;
+    /* Header */
+    .header-container {
+        padding: 0 2rem;
     }
     
-    /* Navigation Adjustments */
-    .navigation {
-        display: flex;
-        flex-direction: row;
+    .logo h1 {
+        font-size: 1.8rem;
     }
     
-    /* Directory Grid Adjustments */
-    .directory-container.grid {
-        grid-template-columns: repeat(2, 1fr);
+    /* Navigation */
+    .nav-menu {
+        gap: 2.5rem;
+    }
+    
+    .nav-menu a {
+        padding: 0.75rem 1.5rem;
+        font-size: 1.1rem;
+    }
+    
+    /* Main Layout */
+    main {
+        padding: 3rem 2rem;
+    }
+    
+    .join-container {
+        gap: 4rem;
+    }
+    
+    /* Form Section */
+    .form-section {
+        padding: 3rem;
+    }
+    
+    .form-section h3 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Membership Cards */
+    .membership-cards {
+        padding: 3rem;
+    }
+    
+    .membership-cards h3 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
     
-    /* List View Adjustments */
-    .directory-container.list .card-content {
-        flex-direction: row;
-        text-align: left;
-    }
-    
-    .directory-container.list .member-image {
-        margin-right: 1.5rem;
-        margin-bottom: 0;
-    }
-    
-    /* Footer Adjustments */
-    .footer-top {
-        flex-direction: row;
-        text-align: left;
-    }
-    
-    .footer-info {
-        flex-direction: row;
-        text-align: left;
-        align-items: flex-start;
-    }
-    
-    .footer-logo {
-        margin-right: 1.5rem;
-        margin-bottom: 0;
-    }
-    
-    .address {
-        margin-bottom: 0;
-    }
-}
-
-/* Desktop Styles (1024px and above) */
-@media only screen and (min-width: 1024px) {
-    /* Header Enhancements */
-    .header-content {
-        padding: 0.5rem 0;
-    }
-    
-    .site-name {
-        font-size: 2rem;
-    }
-    
-    .tagline {
-        font-size: 1rem;
-    }
-    
-    /* Navigation Enhancements */
-    .navigation {
-        padding: 0.25rem 0;
-    }
-    
-    .navigation a {
-        font-size: 1.1rem;
-    }
-    
-    /* Directory Grid Enhancements */
-    .directory-container.grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    /* Member Card Enhancements */
-    .member-card {
-        transition: all 0.3s ease;
-    }
-    
-    .member-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* Footer Enhancements */
-    .footer-top {
-        padding: 1rem 0;
-    }
-    
-    .social-media img {
-        width: 45px;
-        height: 45px;
-    }
-}
-
-/* Large Desktop Styles (1440px and above) */
-@media only screen and (min-width: 1440px) {
-    /* Directory Grid Enhancements */
-    .directory-container.grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    
-    /* Main Content Spacing */
-    main {
+    .membership-card {
         padding: 2rem;
+        transition: all 0.4s ease;
     }
     
-    /* Enhanced Typography */
-    body {
-        font-size: 1.1rem;
+    .membership-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     }
     
-    h2 {
-        font-size: 2.2rem;
+    /* Summary Grid for Desktop */
+    .summary-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
     }
     
-    h3 {
-        font-size: 1.5rem;
-    }
-}
-
-
-/** Css for Larger desktop**/
-
-/* ==========================================================================
-   Larger Screen Styles - Tablet and Desktop
-   Kampala Chamber of Commerce
-   ========================================================================== */
-
-/* ==========================================================================
-   Tablet Styles (768px and up)
-   ========================================================================== */
-
-@media screen and (min-width: 768px) {
-    
-    /* Header adjustments */
-    .header-content {
-        padding: var(--spacing-md) var(--spacing-lg);
+    .summary-item {
+        padding: 1.5rem;
     }
     
-    .logo {
+    /* Steps Container */
+    .steps-container {
+        gap: 2rem;
+    }
+    
+    .step {
+        padding: 2rem;
+        border-radius: 15px;
+    }
+    
+    .step:hover {
+        transform: translateX(15px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .step-number {
         width: 60px;
         height: 60px;
+        font-size: 1.8rem;
     }
     
-    .site-name {
-        font-size: var(--font-size-xl);
-    }
-    
-    .tagline {
-        font-size: var(--font-size-base);
-    }
-    
-    /* Navigation - Horizontal layout */
-    .hamburger {
-        display: none;
-    }
-    
-    .navigation {
-        display: flex !important;
-        flex-direction: row;
-        background-color: var(--primary-color);
-        justify-content: center;
-        padding: 0;
-    }
-    
-    .navigation li {
-        border-bottom: none;
-        border-right: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .navigation li:last-child {
-        border-right: none;
-    }
-    
-    .navigation a {
-        padding: var(--spacing-md) var(--spacing-lg);
-        white-space: nowrap;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .navigation a::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: -100%;
-        width: 100%;
-        height: 3px;
-        background-color: var(--secondary-color);
-        transition: left var(--transition-normal);
-    }
-    
-    .navigation a:hover::before,
-    .navigation .active a::before {
-        left: 0;
-    }
-    
-    /* Hero section enhancement */
+    /* Hero Sections */
     .hero {
-        height: 500px;
-        margin-bottom: var(--spacing-xl);
+        padding: 4rem 3rem;
+        margin-bottom: 4rem;
     }
     
-    .hero h1 {
-        font-size: clamp(2rem, 5vw, 4rem);
+    .hero h2 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
     }
     
     .hero p {
-        font-size: var(--font-size-xl);
-        max-width: 600px;
+        font-size: 1.3rem;
     }
     
-    .cta-button {
-        font-size: var(--font-size-xl);
-        padding: var(--spacing-md) var(--spacing-xl);
+    .thank-you-hero {
+        padding: 5rem 3rem;
+        margin-bottom: 4rem;
     }
     
-    /* Events grid */
-    .events-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-xl);
+    .thank-you-hero h2 {
+        font-size: 3rem;
     }
     
-    /* Weather section improvements */
-    .weather {
-        margin: 0 var(--spacing-lg) var(--spacing-xl);
+    .thank-you-hero p {
+        font-size: 1.3rem;
     }
     
-    .forecast-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: var(--spacing-md);
+    .success-icon {
+        width: 120px;
+        height: 120px;
+        font-size: 5rem;
     }
     
-    #current-temp {
-        font-size: 4rem;
+    /* Cards and Sections */
+    .card {
+        padding: 3rem;
     }
     
-    .weather-icon {
-        width: 80px;
-        height: 80px;
+    .application-summary,
+    .next-steps,
+    .contact-info {
+        padding: 3rem;
     }
     
-    /* Company spotlights */
-    .spotlights-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-xl);
+    /* Contact Info */
+    .contact-info {
+        padding: 3rem;
     }
     
-    /* Footer improvements */
-    .footer-top {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: var(--spacing-xl);
+    .contact-details {
+        padding: 2rem;
+        font-size: 1.1rem;
     }
     
-    .footer-info {
-        flex-direction: row;
-        text-align: left;
-        gap: var(--spacing-lg);
+    /* Action Buttons */
+    .action-buttons {
+        gap: 2rem;
+        margin-bottom: 3rem;
     }
     
-    .footer-logo {
-        width: 100px;
-        height: 100px;
+    .btn {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.2rem;
+        min-width: 250px;
     }
     
-    .social-media {
-        flex-direction: column;
-        gap: var(--spacing-sm);
-    }
-    
-    .social-media img {
-        width: 35px;
-        height: 35px;
-    }
-}
-
-/* ==========================================================================
-   Desktop Styles (1024px and up)
-   ========================================================================== */
-
-@media screen and (min-width: 1024px) {
-    
-    /* Enhanced typography */
-    :root {
-        --font-size-base: 18px;
-        --font-size-large: 20px;
-        --font-size-xl: 28px;
-        --font-size-xxl: 36px;
-    }
-    
-    /* Header enhancements */
-    .header-content {
-        padding: var(--spacing-lg) var(--spacing-xl);
-    }
-    
-    .logo {
-        width: 70px;
-        height: 70px;
-    }
-    
-    /* Navigation with better hover effects */
-    .navigation a {
-        padding: var(--spacing-md) var(--spacing-xl);
-        transition: all var(--transition-normal);
-    }
-    
-    .navigation a:hover {
-        background-color: rgba(255, 255, 255, 0.15);
-        color: var(--secondary-color);
-    }
-    
-    /* Hero section - full screen impact */
-    .hero {
-        height: 600px;
-    }
-    
-    .hero-overlay {
-        padding: var(--spacing-xl);
-    }
-    
-    /* Three column layout for main content */
-    .home-content {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: var(--spacing-xl);
-        padding: 0 var(--spacing-lg);
-    }
-    
-    .hero {
-        grid-column: 1 / -1;
-        margin-bottom: var(--spacing-lg);
-    }
-    
-    .main-column {
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-xl);
-    }
-    
-    .sidebar {
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-lg);
-    }
-    
-    /* Events - single column in main area */
-    .events-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .event-card {
-        padding: var(--spacing-xl);
-    }
-    
-    /* Weather - sidebar styling */
-    .weather {
-        margin: 0;
-        padding: var(--spacing-xl);
-    }
-    
-    .current-weather {
-        margin-bottom: var(--spacing-xl);
-    }
-    
-    .weather-main {
-        margin-bottom: var(--spacing-md);
-    }
-    
-    #current-temp {
-        font-size: 3.5rem;
-    }
-    
-    /* Company spotlights - back to single column in sidebar */
-    .company-spotlights {
-        padding: 0;
-    }
-    
-    .spotlights-grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-md);
-    }
-    
-    .spotlight-card {
-        padding: var(--spacing-lg);
-    }
-    
-    /* Enhanced footer */
-    .footer-top {
-        padding: var(--spacing-xl) var(--spacing-xl);
-    }
-    
-    .footer-info {
-        gap: var(--spacing-xl);
-    }
-    
-    .address {
-        font-size: var(--font-size-large);
-    }
-    
-    .social-media {
-        gap: var(--spacing-md);
-    }
-    
-    .social-media img {
-        width: 40px;
-        height: 40px;
-    }
-}
-
-/* ==========================================================================
-   Large Desktop Styles (1200px and up)
-   ========================================================================== */
-
-@media screen and (min-width: 1200px) {
-    
-    /* Container max width */
-    .header-content,
-    .home-content,
-    .footer-top {
-        max-width: 1400px;
-    }
-    
-    /* Hero section - cinematic experience */
-    .hero {
-        height: 70vh;
-        min-height: 500px;
-        max-height: 800px;
-    }
-    
-    .hero h1 {
-        font-size: clamp(3rem, 6vw, 5rem);
-        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-    }
-    
-    .hero p {
-        font-size: clamp(1.2rem, 2vw, 1.5rem);
+    /* Modal */
+    .modal-content {
+        padding: 3rem;
         max-width: 700px;
     }
     
-    /* Grid layout optimization */
-    .home-content {
-        grid-template-columns: 2.5fr 1fr;
-        gap: var(--spacing-xl);
-        padding: 0 var(--spacing-xl);
-    }
-    
-    /* Events - two column layout returns */
-    .events-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-xl);
-    }
-    
-    /* Weather enhancements */
-    .weather {
-        padding: var(--spacing-xl);
-    }
-    
-    #current-temp {
-        font-size: 4rem;
-    }
-    
-    .weather-icon {
-        width: 100px;
-        height: 100px;
-    }
-    
-    /* Company spotlights - can fit 2 in sidebar */
-    .spotlights-grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
-    }
-    
-    /* Navigation - more spacing */
-    .navigation a {
-        padding: var(--spacing-lg) var(--spacing-xl);
-    }
-    
-    /* Footer enhancements */
-    .footer-top {
-        padding: var(--spacing-xl);
-
-    }
-}
+    .modal-content h
