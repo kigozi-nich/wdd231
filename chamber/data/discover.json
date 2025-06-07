@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Uganda Museum",
+    "address": "Kira Road, Kampala, Uganda",
+    "description": "Explore Uganda's cultural and historical heritage.",
+    "image": "images/uganda-museum.webp"
+  },
+  {
+    "title": "Ndere Cultural Centre",
+    "address": "Ntinda-Kisaasi Rd, Kampala",
+    "description": "A venue showcasing traditional music and dance.",
+    "image": "images/ndere-centre.webp"
+  },
+  {
+    "title": "Gaddafi National Mosque",
+    "address": "Old Kampala Hill, Kampala",
+    "description": "One of the largest mosques in Africa with panoramic city views.",
+    "image": "images/gaddafi-mosque.webp"
+  },
+  {
+    "title": "Craft Market",
+    "address": "Buganda Rd, Kampala",
+    "description": "A bustling market full of handmade Ugandan crafts.",
+    "image": "images/craft-market.webp"
+  },
+  {
+    "title": "Kabaka's Palace",
+    "address": "Lubiri Ring Road, Kampala",
+    "description": "Royal residence of the Buganda Kingdom.",
+    "image": "images/kabakas-palace.webp"
+  },
+  {
+    "title": "Baháʼí Temple",
+    "address": "Kikaya Hill, Kampala",
+    "description": "The only Baháʼí temple in Africa with peaceful gardens.",
+    "image": "images/bahai-temple.webp"
+  },
+  {
+    "title": "Kampala Railway Station",
+    "address": "Station Road, Kampala",
+    "description": "Historic colonial-era railway terminal.",
+    "image": "images/railway-station.webp"
+  },
+  {
+    "title": "Lake Victoria Viewpoint",
+    "address": "Ggaba Road, Kampala",
+    "description": "A scenic point to view Lake Victoria and surrounding nature.",
+    "image": "images/lake-victoria.webp"
+  }
+]

@@ -1,0 +1,55 @@
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.grid-container section {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.grid-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.grid-container button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #0088cc;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hover effect on larger screens */
+@media (min-width: 641px) {
+  .grid-container img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    filter: brightness(1.1);
+  }
+}
+
+/* Responsive Grid Layouts */
+@media (max-width: 640px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
