@@ -3,7 +3,7 @@
     "title": "Uganda Museum",
     "address": "Kira Road, Kampala, Uganda",
     "description": "Explore Uganda's cultural and historical heritage.",
-    "image": "images/uganda_meseum.webp"
+    "image": "images/uganda_meseum.jpeg"
   },
   {
     "title": "Ndere Cultural Centre",
@@ -15,19 +15,19 @@
     "title": "Gaddafi National Mosque",
     "address": "Old Kampala Hill, Kampala",
     "description": "One of the largest mosques in Africa with panoramic city views.",
-    "image": "images/gaddafi_nationalmosque.jpeg"
+    "image": "images/gaddafi_national mosque.jpeg"
   },
   {
     "title": "Craft Market",
     "address": "Buganda Rd, Kampala",
     "description": "A bustling market full of handmade Ugandan crafts.",
-    "image": "images/craft_market.webp"
+    "image": "images/craft_market.jpeg"
   },
   {
     "title": "Kabaka's Palace",
     "address": "Lubiri Ring Road, Kampala",
     "description": "Royal residence of the Buganda Kingdom.",
-    "image": "images/kabaka_palace.jpeg"
+    "image": "images/kabaka_palace.jpg"
   },
   {
     "title": "Baháʼí Temple",
