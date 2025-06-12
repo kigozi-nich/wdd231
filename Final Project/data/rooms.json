@@ -86,7 +86,7 @@
     "type": "Extended Stay",
     "description": "Furnished apartment with kitchen, living area, and workspace.",
     "price": 160,
-    "image": "images/rooms/studio.jpg",
+    "image": "images/rooms/studio.jpeg",
     "amenities": ["Kitchen", "Wi-Fi", "Work Desk", "TV"]
   },
   {
@@ -95,7 +95,7 @@
     "type": "Deluxe",
     "description": "Stunning views of the lake with floor-to-ceiling windows.",
     "price": 140,
-    "image": "images/rooms/lake-view.jpg",
+    "image": "images/project/lake-view.jpg",
     "amenities": ["Wi-Fi", "TV", "Balcony", "Coffee Maker"]
   },
   {
