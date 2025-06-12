@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "name": "Deluxe King Room",
+    "type": "Deluxe",
+    "description": "Spacious deluxe room with king-size bed, mountain views, and a modern bathroom.",
+    "price": 120,
+    "image": "images/rooms/deluxe-king.jpg",
+    "amenities": ["Wi-Fi", "TV", "Balcony", "Room Service"]
+  },
+  {
+    "id": 2,
+    "name": "Standard Twin Room",
+    "type": "Standard",
+    "description": "Comfortable twin room ideal for friends or business travelers.",
+    "price": 90,
+    "image": "images/rooms/standard-twin.jpg",
+    "amenities": ["Wi-Fi", "TV", "Desk"]
+  },
+  {
+    "id": 3,
+    "name": "Executive Suite",
+    "type": "Suite",
+    "description": "Luxurious suite with private lounge, workspace, and upgraded amenities.",
+    "price": 180,
+    "image": "images/rooms/executive-suite.jpg",
+    "amenities": ["Wi-Fi", "TV", "Lounge Area", "Jacuzzi"]
+  },
+  {
+    "id": 4,
+    "name": "Family Room",
+    "type": "Family",
+    "description": "Perfect for families. Spacious layout with multiple beds and kid-friendly features.",
+    "price": 150,
+    "image": "images/rooms/family-room.jpg",
+    "amenities": ["Wi-Fi", "Crib", "TV", "Kitchenette"]
+  },
+  {
+    "id": 5,
+    "name": "Honeymoon Suite",
+    "type": "Suite",
+    "description": "Romantic setup with stunning views, rose petal decor, and jacuzzi.",
+    "price": 200,
+    "image": "images/rooms/honeymoon-suite.jpg",
+    "amenities": ["Jacuzzi", "Wi-Fi", "TV", "Mini Bar"]
+  },
+  {
+    "id": 6,
+    "name": "Economy Room",
+    "type": "Budget",
+    "description": "Affordable and simple room for travelers on a budget.",
+    "price": 60,
+    "image": "images/rooms/economy-room.jpg",
+    "amenities": ["Wi-Fi", "Fan", "Shared Bathroom"]
+  },
+  {
+    "id": 7,
+    "name": "Penthouse Suite",
+    "type": "Luxury",
+    "description": "Top-floor penthouse with panoramic views and personalized service.",
+    "price": 350,
+    "image": "images/rooms/penthouse.jpg",
+    "amenities": ["Private Terrace", "Butler Service", "Wi-Fi", "Luxury Bath"]
+  },
+  {
+    "id": 8,
+    "name": "Accessible Room",
+    "type": "Standard",
+    "description": "Fully accessible room designed for guests with mobility needs.",
+    "price": 100,
+    "image": "images/rooms/accessible-room.jpg",
+    "amenities": ["Wheelchair Access", "TV", "Wi-Fi", "Accessible Bathroom"]
+  },
+  {
+    "id": 9,
+    "name": "Garden View Room",
+    "type": "Standard",
+    "description": "Relaxing room with serene views of the garden area.",
+    "price": 110,
+    "image": "images/rooms/garden-view.jpg",
+    "amenities": ["Wi-Fi", "Balcony", "TV", "Mini Fridge"]
+  },
+  {
+    "id": 10,
+    "name": "Studio Apartment",
+    "type": "Extended Stay",
+    "description": "Furnished apartment with kitchen, living area, and workspace.",
+    "price": 160,
+    "image": "images/rooms/studio.jpg",
+    "amenities": ["Kitchen", "Wi-Fi", "Work Desk", "TV"]
+  },
+  {
+    "id": 11,
+    "name": "Lake View Room",
+    "type": "Deluxe",
+    "description": "Stunning views of the lake with floor-to-ceiling windows.",
+    "price": 140,
+    "image": "images/rooms/lake-view.jpg",
+    "amenities": ["Wi-Fi", "TV", "Balcony", "Coffee Maker"]
+  },
+  {
+    "id": 12,
+    "name": "Loft Room",
+    "type": "Modern",
+    "description": "Trendy loft with a modern open-plan layout and minimalist design.",
+    "price": 130,
+    "image": "images/rooms/loft-room.jpg",
+    "amenities": ["Wi-Fi", "TV", "Open Space", "Sound System"]
+  },
+  {
+    "id": 13,
+    "name": "Presidential Suite",
+    "type": "Luxury",
+    "description": "Ultimate luxury with a private elevator, dining room, and concierge.",
+    "price": 500,
+    "image": "images/rooms/presidential.jpg",
+    "amenities": ["Concierge", "Jacuzzi", "Wi-Fi", "Dining Area"]
+  },
+  {
+    "id": 14,
+    "name": "Rustic Cabin",
+    "type": "Nature",
+    "description": "Wooden cabin surrounded by trees, perfect for a quiet retreat.",
+    "price": 100,
+    "image": "images/rooms/rustic-cabin.jpg",
+    "amenities": ["Fireplace", "Wi-Fi", "Porch", "Nature View"]
+  },
+  {
+    "id": 15,
+    "name": "City View Room",
+    "type": "Deluxe",
+    "description": "Enjoy the skyline with our modern city view rooms.",
+    "price": 125,
+    "image": "images/rooms/city-view.jpg",
+    "amenities": ["Wi-Fi", "TV", "Large Windows", "Soundproofing"]
+  }
+]
