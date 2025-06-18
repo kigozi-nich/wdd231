@@ -749,11 +749,11 @@ section h2::after {
 }
 
 /* Common Card Shadows */
-.room-card, .purpose-card, .info-card, .review-card {
+.purpose-card, .info-card, .review-card {
 	box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-.room-card:hover, .purpose-card:hover, .info-card:hover, .review-card:hover {
+.purpose-card:hover, .info-card:hover, .review-card:hover {
 	box-shadow: 0 8px 25px rgba(0,0,0,0.4);
 }
 
@@ -762,11 +762,11 @@ p, h1, h2, h3, h4, h5, h6 {
 	text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
-.info-card, .room-card, .purpose-card, .review-card {
+.info-card, .purpose-card, .review-card {
 	color: var(--text2-color);
 }
 
-.info-card p, .room-card p, .purpose-card p, .review-card p {
+.info-card p, .purpose-card p, .review-card p {
 	font-size: 1.1rem;
 	line-height: 1.6;
 	text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
