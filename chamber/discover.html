@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nicholas Kigozi">
+    <title>Discover Kampala | Chamber of Commerce</title>
+    <meta name="description" content="Discover exciting places and landmarks in Kampala.">
+    <meta property="og:title" content="Discover Kampala | Chamber of Commerce">
+    <meta property="og:description" content="Explore top landmarks, cultural attractions, and must-see locations in Kampala, Uganda.">
+    <meta property="og:image" content="https://kigozi-nich.github.io/wdd231/chamber/images/discover_kampala.jpg">
+    <meta property="og:url" content="https://kigozi-nich.github.io/wdd231/chamber/discover.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kampala Chamber of Commerce">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="styles/discover.css">
+    <script src="scripts/discover.js"></script>
+  
+    <link rel="stylesheet" href="styles/discover.css">
+
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+</head>
+<body>
+  <header class="header">
+      <div class="logo">
+          <img src="images/kampala_chamber.png" alt="Kampala City Business Chamber Logo">
+      </div>
+      <nav>
+          <button id="hamburger">☰</button>
+          <div id="navMenu" class="nav-menu">
+              <a href="index.html" aria-label="Navigate to Home">Home</a>
+              <a href="directory.html" aria-label="Navigate to Directory">Directory</a>
+              <a href="#" aria-label="Navigate to About Us">About</a>
+              <a href="#" aria-label="Navigate to Contact Us">Discover</a>
+              <a href="join.html" aria-label="Navigate to Contact Us">Join</a>
+          </div>
+      </nav>
+  </header>
+  
+  <main>
+    <h1>Kampala City Business Chamber</h1> <!-- This must be the first element in <main> -->
+
+    <section class="visitor-message">
+        <p id="visitMessage">Loading...</p>
+    </section>
+
+    <section class="grid-container" id="tourismGrid">
+        <!-- JavaScript will populate this section -->
+    </section>
+</main>
+  <footer>
+        <div class="footer-top">
+            <div class="footer-info">
+                <img src="images/kampala_chamber.png" alt="Kampala Chamber of Commerce Logo" class="footer-logo">
+                <div class="address">
+                    <p>Kampala Chamber of Commerce</p>
+                    <p>Plot 1, Kimathi Avenue</p>
+                    <p>Kampala, Uganda</p>
+                    <p>info@kampalachamber.co.ug</p>
+                    <p>(+256) 414-123456</p>
+                </div>
+            </div>
+            
+            <div class="social-media">
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                    <img src="images/youtube.png" alt="YouTube Icon">
+                </a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                    <img src="images/twitter.png" alt="Twitter Icon">
+                </a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <img src="images/linkedin.png" alt="LinkedIn Icon">
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>WDD231 Class Project</p>
+            <p>Nicholas Kigozi</p>
+            <p>&copy; <span id="currentYear"></span> Kampala Chamber of Commerce</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>
+

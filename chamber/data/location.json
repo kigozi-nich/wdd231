@@ -1,0 +1,60 @@
+{
+    "location": [
+        {
+            "title": "Uganda Mesium",
+            "image": "images/uganda_meseum.jpeg",
+            "address": "Southwest Uganda",
+            "description": "Famous for gorilla trekking and biodiversity.",
+            "url": "https://www.ugandamuseums.or.ug/"
+        },
+        {
+            "title": "Ndere Cultural centre",
+            "image": "images/ndere_culturalcentre.jpeg",
+            "address": "Northwestern Uganda",
+            "description": "Known for its powerful waterfall and wildlife.",
+            "url": "https://ugandawildlife.org/national-parks/murchison-falls-national-park"
+        },
+        {
+            "title": "Lake Victoria",
+            "image": "images/lake_victoria.jpeg",
+            "address": "Central Uganda",
+            "description": "The largest lake in Africa, offering many water activities.",
+            "url": "https://en.wikipedia.org/wiki/Lake_Victoria"
+        },
+        {
+            "title": "kabaka's palace",
+            "image": "images/kabaka_palace.jpg",
+            "address": "Northeastern Uganda",
+            "description": "Famous for its stunning landscapes and wildlife.",
+            "url": "https://www.alamy.com/stock-photo/uganda-kabaka's-palace.html?sortBy=relevant "
+        },
+        {
+            "title": "Craft Market",
+            "image": "images/craft_market.jpeg",
+            "address": "Western Uganda",
+            "description": "A scenic town near crater lakes and national parks.",
+            "url": "https://www.alamy.com/stock-photo/craft-market.html?sortBy=relevant"
+        },
+        {
+            "title": "Gaddafi National mosque",
+            "image": "images/gaddafi_national mosque.jpeg",
+            "address": "Eastern Uganda",
+            "description": "Home to the source of the Nile and adventure activities.",
+            "url": "https://en.wikipedia.org/wiki/Uganda_National_Mosque"
+        },
+{
+    "title": "Bahai Temple",
+    "image": "images/bahai_temple.jpeg",
+    "address": "Western Uganda",
+    "description": "Known as the 'Mountains of the Moon' with unique glaciers.",
+    "url": "https://en.wikipedia.org/wiki/Bah%C3%A1%CA%BC%C3%AD_Faith_in_Uganda"
+},
+        {
+            "title": "Kampala Railway station",
+            "image": "images/kampala_railwaystation.jpeg",
+            "address": "Entebbe, Central Uganda",
+            "description": "A beautiful garden by Lake Victoria.",
+            "url": "https://urc.go.ug/"
+        }
+    ]
+}
